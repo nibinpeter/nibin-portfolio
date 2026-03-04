@@ -1,0 +1,154 @@
+/* General Reset */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f4f4f9;
+  color: #333;
+  animation: fadeIn 0.8s ease; /* Page fade-in animation */
+  perspective: 1200px;          /* Added for flip effect */
+  transform-style: preserve-3d; /* Added for flip effect */
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background: #2c3e50;
+  color: white;
+  width: 25%;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+}
+
+/* Attractive Name Styling */
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #1abc9c, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s ease-in-out infinite alternate;
+  margin-bottom: 10px;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #1abc9c; }
+  to { text-shadow: 0 0 20px #3498db; }
+}
+
+/* Sidebar Links */
+.sidebar a {
+  color: #1abc9c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #f39c12;
+}
+
+/* Navigation */
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.05);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.05);
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #1abc9c;
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* Sections */
+section {
+  background: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeInUp 1s ease;
+}
+
+h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade-out for page transitions */
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* --- Book-style Flip Animations --- */
+.page-flip {
+  transform-origin: left center;
+  transform: rotateY(-90deg);
+  animation: flipIn 0.8s ease forwards;
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipOut {
+  from {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+}
