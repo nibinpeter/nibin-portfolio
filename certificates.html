@@ -2,60 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Certificates - Nibin Peter</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <script>
+    const theme = localStorage.getItem("portfolio-theme") || "dark";
+    if (theme === "light") document.body.classList.add("light-theme");
+  </script>
+
   <div class="container">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <h1 class="name">Nibin Peter</h1>
-      <p id="title"></p>
-      <p>Email: <a href="mailto:nibinpeter888@gmail.com">nibinpeter888@gmail.com</a></p>
-      <p>Phone: +91 6282179713</p>
-      <p>
-        <a href="https://github.com/nibin-peter" target="_blank">GitHub</a> | 
-        <a href="https://linkedin.com/in/nibin-peter" target="_blank">LinkedIn</a>
-      </p>
+      <div class="sidebar-content">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
 
-      <!-- Navigation -->
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="education.html">Education</a>
-        <a href="projects.html">Projects</a>
-        <a href="skills.html">Skills</a>
-        <a href="certificates.html">Certificates</a>
-      </nav>
+        <!-- Profile -->
+        <div class="profile-pic-container">
+          <svg viewBox="0 0 100 100" class="profile-pic">
+            <defs>
+              <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6366f1" />
+                <stop offset="100%" stop-color="#a855f7" />
+              </linearGradient>
+              <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f8fafc" />
+                <stop offset="100%" stop-color="#cbd5e1" />
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="50" fill="url(#bgGrad)" />
+            <path d="M20,90 Q50,60 80,90 Z" fill="#1e293b" />
+            <path d="M43,65 L57,65 L53,75 L47,75 Z" fill="#f1f5f9" />
+            <circle cx="50" cy="45" r="20" fill="url(#avatarGrad)" />
+            <path d="M30,45 Q35,20 65,22 Q72,25 70,35 Q68,40 68,36 Q60,34 50,34 Q38,34 30,45 Z" fill="#0f172a" />
+            <rect x="36" y="42" width="10" height="8" rx="3" fill="none" stroke="#6366f1" stroke-width="2" />
+            <rect x="54" y="42" width="10" height="8" rx="3" fill="none" stroke="#6366f1" stroke-width="2" />
+            <line x1="46" y1="46" x2="54" y2="46" stroke="#6366f1" stroke-width="2" />
+            <line x1="30" y1="46" x2="36" y2="46" stroke="#6366f1" stroke-width="2" />
+            <line x1="64" y1="46" x2="70" y2="46" stroke="#6366f1" stroke-width="2" />
+            <path d="M46,55 Q50,58 54,55" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h1 class="name">Nibin Peter</h1>
+        <div class="tagline">Web Developer</div>
+
+        <!-- Contacts -->
+        <div class="contact-info">
+          <a href="mailto:nibinpeter888@gmail.com" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>nibinpeter888@gmail.com</span>
+          </a>
+          <a href="tel:+916282179713" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 6282179713</span>
+          </a>
+          <a href="https://github.com/nibin-peter" target="_blank" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span>github.com/nibin-peter</span>
+          </a>
+          <a href="https://linkedin.com/in/nibin-peter" target="_blank" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            <span>linkedin.com/in/nibin-peter</span>
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+          <a href="index.html" class="nav-home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            Home
+          </a>
+          <a href="education.html" class="nav-edu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+            Education
+          </a>
+          <a href="projects.html" class="nav-projects">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            Projects
+          </a>
+          <a href="skills.html" class="nav-skills">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2Z"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            Skills
+          </a>
+          <a href="certificates.html" class="active nav-certs">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Certificates
+          </a>
+        </nav>
+      </div>
     </aside>
 
     <!-- Main Content -->
     <main class="content">
       <h2>Certificates</h2>
+      
+      <div class="certs-grid">
+        <!-- Certificate Card 1 -->
+        <article class="cert-card glow-card">
+          <h3>
+            <a href="https://www.coursera.org" target="_blank">
+              Fundamentals of Machine Learning and AI
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </h3>
+          <div class="cert-meta">
+            <span class="cert-issuer">AWS</span>
+            <span class="cert-date">2024 – 2026</span>
+          </div>
+        </article>
 
-      <!-- Certificate Row 1 -->
-      <section class="cert-card">
-        <h3>
-          <a href="https://www.coursera.org" target="_blank">
-            Fundamentals of Machine Learning and AI
-          </a>
-        </h3>
-        <p>AWS (2024 – 2026)</p>
-      </section>
+        <!-- Certificate Card 2 -->
+        <article class="cert-card glow-card">
+          <h3>
+            <a href="https://www.coursera.org" target="_blank">
+              Google Cybersecurity Certificate
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </h3>
+          <div class="cert-meta">
+            <span class="cert-issuer">Google</span>
+            <span class="cert-date">2025 – 2026</span>
+          </div>
+        </article>
+      </div>
 
-      <!-- Certificate Row 2 -->
-      <section class="cert-card">
-        <h3>
-          <a href="https://www.coursera.org" target="_blank">
-            Google Cybersecurity Certificate
-          </a>
-        </h3>
-        <p>Google (2025 – 2026)</p>
-      </section>
+      <!-- Footer -->
+      <footer>
+        <p>© 2026 Nibin Peter. All rights reserved.</p>
+      </footer>
     </main>
   </div>
 
-  <!-- JavaScript for typing animation and page transitions -->
   <script src="script.js"></script>
 </body>
 </html>
